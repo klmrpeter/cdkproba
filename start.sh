@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 
+apt update
+apt install python3-pip -y
+apt install npm -y
 npm install -g aws-cdk
 mkdir proba
 cd proba
 cdk init --language python
-source .env/bin/activate
-pip3 install -r requirements.txt
 cd ..
 cat apppy.txt > proba/app.py
 cat stack.txt > proba/proba/proba_stack.py
 pip3 install aws-cdk.aws-eks
 cd proba
+pip3 install aws-cdk.aws-eks
+pip3 install -r requirements.txt
 cdk synth
