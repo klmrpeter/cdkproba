@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/bin/bash
 
 apt update
 apt install python3-pip -y
